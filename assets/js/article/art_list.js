@@ -92,7 +92,11 @@ $(document).ready(function() {
             }
         });
     }
-
+    // 根据文章id获取文章内容
+    $("body").on("click", ".btn-edit", function() {
+        var id = $(this).data("id");
+        location.href = "/article/art_pub.html?id=" + id;
+    })
     $("body").on("click", ".btn-delete", function() {
         var len = $(".btn-delete").length;
         var id = $(this).data("id");
